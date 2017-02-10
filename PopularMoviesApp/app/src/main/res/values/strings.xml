@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PopularMoviesApp</string>
+    <string name="title_activity_movie_details">MovieDetails</string>
+    <string name="sort_by">Sort by</string>
+    <string name="sort_by_popularity">Sort by most popular</string>
+    <string name="sort_by_rating">Sort by top rated</string>
+    <string name="trailers">Trailers :</string>
+</resources>

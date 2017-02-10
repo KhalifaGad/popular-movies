@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_original_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="24%"
+        android:text="TEST_NAME"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="40sp"
+        android:paddingStart="16dp"
+        android:paddingTop="32dp"
+        android:paddingLeft="16dp" />
+
+    <ImageView
+        android:id="@+id/iv_movie_img"
+        app:layout_widthPercent="32%"
+        app:layout_heightPercent="32%"
+        app:layout_marginLeftPercent="8%"
+        app:layout_marginTopPercent="4%"
+        android:layout_below="@+id/tv_original_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tv_release_date"
+        app:layout_widthPercent="40%"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="4%"
+        android:text="release_date"
+        app:layout_marginLeftPercent="8%"
+        android:textSize="24dp"
+        android:layout_alignTop="@+id/iv_movie_img"
+        android:layout_toRightOf="@+id/iv_movie_img"
+        android:layout_toEndOf="@+id/iv_movie_img" />
+
+    <TextView
+        android:id="@+id/tv_vote_average"
+        app:layout_widthPercent="40%"
+        android:layout_height="wrap_content"
+        app:layout_marginTopPercent="8%"
+        android:textSize="16dp"
+        android:text="vote_average"
+        android:layout_below="@+id/tv_release_date"
+        android:layout_alignLeft="@+id/tv_release_date"
+        android:layout_alignStart="@+id/tv_release_date" />
+
+    <ScrollView
+        android:id="@+id/sv_overview"
+        android:layout_width="match_parent"
+        app:layout_heightPercent="16%"
+        app:layout_marginLeftPercent="8%"
+        app:layout_marginRightPercent="8%"
+        app:layout_marginTopPercent="4%"
+        android:layout_below="@+id/iv_movie_img"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:outlineProvider="bounds">
+        <TextView
+        android:id="@+id/tv_overview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:textSize="16dp"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_marginLeftPercent="8%"
+        app:layout_marginTopPercent="2%"
+        android:layout_below="@+id/sv_overview"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:id="@+id/tv_trailers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trailers"
+            android:textSize="16sp"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+
+</android.support.percent.PercentRelativeLayout>
